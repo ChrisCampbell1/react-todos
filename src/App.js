@@ -1,13 +1,10 @@
 import './App.css';
-import { todosList } from './todos-data';
-import Todo from './Todo';
+import TodoList from './TodoList';
 
 function App() {
   return (
     <div>
-      {todosList.map(todo =>
-      <Todo todo={todo}/>
-        )}
+      <TodoList />
     </div>
   );
 }
