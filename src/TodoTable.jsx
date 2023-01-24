@@ -1,19 +1,19 @@
+import TodoTableRow from "./TodoTableRow";
+
 const TodoTable = (props) => {
   return (  
     <div>
       <table>
         <thead>
+          <tr>
           <th>Owner</th>
           <th>Todo</th>
           <th>Complete?</th>
+          </tr>
         </thead>
         <tbody>
           {props.todos.map(todo =>
-            <tr>
-              <td>{todo.userId}</td>
-              <td>{todo.title}</td>
-              <td>{todo.completed ? "Yes" : "No"}</td>
-            </tr>
+            <TodoTableRow todo={todo} key={todo.id}/>
             )}
         </tbody>
       </table>
