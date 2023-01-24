@@ -7,6 +7,15 @@ const TodoTable = (props) => {
           <th>Todo</th>
           <th>Complete?</th>
         </thead>
+        <tbody>
+          {props.todos.map(todo =>
+            <tr>
+              <td>{todo.userId}</td>
+              <td>{todo.title}</td>
+              <td>{todo.completed ? "Yes" : "No"}</td>
+            </tr>
+            )}
+        </tbody>
       </table>
     </div>
   )
